@@ -1,0 +1,98 @@
+<footer>
+  <div class="container footer-container" #footerContainer>
+    <div class="title" #title>
+      <h3>Let’s build</h3>
+      <h2>Future together</h2>
+    </div>
+  
+    <div class="main-section" #mainSection>
+      <button class="contact-btn" (click)="contactUs()">Contact us</button>
+      <div class="info-section">
+        <div class="pages">
+          <h4>Pages</h4>
+          <ul class="pages-list">
+            <li><a href="">About</a></li>
+            <li><a href="">EZ Smartboxes</a></li>
+            <li><a href="">EZ Smartgrid</a></li>
+            <li><a href="">Our cases</a></li>
+            <li><a href="">News</a></li>
+            <li><a href="">Careers</a></li>
+          </ul>
+        </div>
+
+        <div class="social-media">
+          <h4>Social media</h4>
+          <ul class="social-media-list">
+            <li><a href="">Telegram</a></li>
+            <li><a href="">Facebook</a></li>
+            <li><a href="">Instagram</a></li>
+            <li><a href="">Twitter</a></li>
+            <li><a href="">Medium</a></li>
+            <li><a href="">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="end-section" #endSection>
+      <div>
+        EZ Blockchain © 2022 All Rights Reserved<br>
+        Terms of service  
+      </div>
+      <div>+1 (888) 890-15-16</div>
+      <div>311 S Wacker Drive, Suite 1410, Chicago, IL 60606</div>
+      <div>info&#64;ezblockchain.net</div>
+    </div>
+
+
+    <div *ngIf="!!isShowForm" style="color:black" class="form-section">
+      <button  class="back-btn" #backButton (click)="goBack()">Go Back</button>
+      <p class="sub-header">EZ Blockchain believes that modern technologies and hard teamwork can significantly benefit energy businesses and reduce CO2 emissions.
+        Let's talk about how we can do it together.</p>
+
+      <h4 style="color: #398BF5; margin-left: 10px;">Get in touch with us</h4>
+
+      <form [formGroup]="myForm" (ngSubmit)="onSubmit()" class="form">
+        <div class="form-group">
+          <input type="text" placeholder="Full Name" formControlName="name" class="form-control">
+        </div>
+        <div class="form-group">
+          <input type="text" placeholder="Company name" formControlName="companyName" class="form-control">
+          <input type="number" placeholder="Phone number" formControlName="companyNumber" class="form-control">
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="Email" formControlName="email" class="form-control">
+        </div>
+        <div class="form-group">
+          <label style="color: #398BF5; margin-left: 10px;" for="category">Type of request</label>
+          <select formControlName="category" class="form-control">
+            <option disabled selected value="">Choose type of request</option>
+            <option value="1">Category 1</option>
+            <option value="2">Category 2</option>
+            <option value="3">Category 3</option>
+            <option value="4">Category 4</option>
+            <option value="5">Category 5</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label style="color: #398BF5; margin-left: 10px;" for="projectInfo">Tell us about the project</label>
+          <textarea placeholder="Short description of the project" formControlName="projectInfo" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+          <label style="color: #398BF5; margin-left: 10px;" for="attachments">Attachments</label>
+          <div class="file-upload">
+            <div class="drag-area" (dragover)="onDragOver($event)" (drop)="onDrop($event)">
+              <label style="color: #398BF5;" for="fileInput">Browse Files</label>
+              <p>or drag & drop</p>
+              <input type="file" id="fileInput" formControlName="attachments" #file style="display: none" (change)="onFileChange($event)">
+              <p>files here</p>
+            </div>
+          </div>
+        </div>
+        <div class="error" *ngIf="error">Only one file at a time is allowed</div>
+        <button type="submit" [disabled]="myForm.invalid" class="submit-btn">SEND</button>
+      </form>
+    </div>
+  </div>
+
+</footer>

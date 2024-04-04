@@ -1,0 +1,217 @@
+:host {
+  display: block;
+  min-height: 615px;
+  background: url(../../../../assets/bg/liquid.svg) center bottom/cover no-repeat;
+
+}
+
+.footer-container {
+  position: relative;
+  padding-top: 100px;
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+.title {
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 140%;
+  &:first-child {
+    font-size: 40px;
+  }
+  &:last-child {
+    font-size: 80px;
+  }
+}
+
+.main-section {
+  margin-top: 45px;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 130px;
+  justify-content: space-between;
+}
+
+.contact-btn {
+  align-self: flex-start;
+  cursor: pointer;
+  padding: 29px 84px;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #398BF5;
+  font-weight: 700;
+  background-color: white;
+  border: none;
+}
+
+.back-btn {
+  position: absolute;
+  top: 100px;
+  left: 120px;
+  transition-duration: 2.5s;
+  cursor: pointer;
+  border: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #398BF5;
+  font-weight: 700;
+  background-color: white;
+  border-bottom: 1px solid #398BF5;
+}
+
+.info-section {
+  display: flex;
+  align-self: center;
+  gap: 3rem;
+}
+
+.pages {
+  width: 230px;
+}
+
+.pages-list  {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pages-list li {
+  flex-basis: 50%;
+}
+
+.social-media {
+  width: 230px;
+}
+
+.social-media-list {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.social-media-list li {
+  flex-basis: 50%;
+}
+
+.end-section {
+  margin-top: 55px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid #fff;
+  text-align: center;
+}
+
+.end-section > div {
+  padding: 10px;
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
+}
+
+.end-section > div:first-child {
+  border-left: none;
+}
+
+.end-section > div:last-child {
+  border-right: none;
+}
+
+.end-section > div:nth-child(even) {
+  border: none;
+}
+
+.form-section {
+  color: #000;
+}
+
+.sub-header {
+  width: 50%;
+  margin-top: 25px;
+  margin-bottom: 55px;
+}
+
+.form {
+  max-width: 100%;
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group:nth-child(2) {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-group:nth-child(4) {
+  display: flex;
+}
+
+.form-group:nth-child(6) {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input.ng-invalid.ng-touched {
+  border: red 1px solid;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+select.form-control {
+  width: 100%;
+}
+
+textarea.form-control {
+  height: 100px;
+}
+
+.file-upload {
+  border: 2px dashed #ccc;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.drag-area {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.drag-area p {
+  margin: 0;
+}
+
+.error {
+  color: red;
+}
+
+.submit-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+  margin-bottom: 25px;
+}
+
+.submit-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
