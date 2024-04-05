@@ -126,14 +126,12 @@ export class FooterComponent {
 
     gsap.to(mainSection, {
       display: 'flex',
-      height: 0,
       opacity: 1,
       duration: 0.5,
     });
 
     gsap.to(endSection, {
       display: 'grid',
-      height: 0,
       opacity: 1,
       duration: 0.5,
     });
